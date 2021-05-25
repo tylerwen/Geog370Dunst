@@ -9,26 +9,53 @@
     <h1>In this project I learned how to display images in different projections</h1>
     
     <h2 style="color:red">Describe in your own words how you displayed the map in different projections using QGIS</h2>
-    <p>You can write a paragraph here</p>
+    <p>My methodology for this was pretty straightforward. After starting the Indicatrix mapper plugin, I added the provided vector layer. Once I did this I rearranged the order so that the indicatrix mapper would load on top of the vector layer. From then, I went to properties and searched the respective projections, and exported them directly into my dev folder for easy access.</p>
     
     <h2>WGS84 Projection</h2>
-    <h3>Some observations</h3>
+    <h3>The equator of the WGS84 Projection is perfectly circlular. Furthermore, there is no distortion in any individual row. The distortion comes in as you travel further past the equator where the circles become more elliptical, indicating a horizontal stretch in the projection.</h3>
     <a href=".//maps/4326.png">
     <img src=".//maps/4326.png" alt="WGS84" width='500px'>
     </a>
     <h2>Aitoff Projection</h2>
-    <h3>Some observations</h3>
+    <h3>The first thing that jumps out about this map is the shape. The world is represented as an oblong, but circular shape. As such the poles are converge on themselves in a manner that suggests the map is being pulled towards its respective poles. The equator is stretched horizontally and the point most free of distortion lies on the prime meridian.</h3>
     <a href=".//maps/54043.png">
     <img src=".//maps/54043.png" alt="Aitoff" width='500px'>
     </a>
     <h2>Pseudo Mercator</h2>
-    <h3>Some observations</h3>
+    <h3>The Pseudo Mercator projection is a very symmetrical map. The poles of the map are enlarged and emphasized, but they are not stretched either horizontally or vertically. The circle remains a perfect sphere. The middle inner portion of this map is (based off the circles) either identical or so close in proportion that it is hard to percieve.</h3>
     <a href=".//maps/3857n.png">
     <img src=".//maps/3857n.png" alt="3857" width='500px'>
     </a> 
-    <h2 style="color:red">Now, you should <u>add the following projections on your own:</u></h2>
-    <h3>EPSG: 3857, 53018, 54034, 54027, 102016, and two additional projections that you choose.</h3>
-    <p></p>
+    <h2>Winkel 1</h2>
+    <h3>The Winkel projection is similar to the Aitoff Projection though perhaps less extreme. It maintains an oblong shape, and every circle is stretched a little more vertical than horizontal. This gives the effect of the the projection seeming to be 3d. The world appears to be wrapped around something, rather than laid out flat. The poles have more horizontal stretch than the indicators in the middle three rows which gives it a less extreme shape thant he Aitoff projection.</h3>
+    <a href=".//maps/53018.png">
+    <img src=".//maps/53018.png" alt="Sphere Winkel 1" width='500px'>
+    </a> 
+    <h2>World Cylindrical Equal Area</h2>
+    <h3>This map is curious in that it puts emphasis on the middle of the world. More accurately perhaps, it condenses the verticality of the poles. This means that the Northernmost part of America, along with Europe are comapcted. The same is true of the most southern tip of South America. The indicators outside of the equator do display a flattening of the circle that is most extreme at the top and botom of the map.</h3>
+    <a href=".//maps/54034.png">
+    <img src=".//maps/54034.png" alt="World Cylindrical Equal Area" width='500px'>
+    </a> 
+    <h2>World Equidistant Conic</h2>
+    <h3>The World Equidistant Conic places the perspective center at the North pole. In order to accomodate for this and ensure that the rest of the world can be seen, there is a need to further distort the map in a positive relationship to each masses' distance from the North Pole. The result of this is that objects become both bigger, and wider the further away you move from the North pole. At the most extreme, the circles became very elliptical and the bottom of the map almost entirely encircles the rest of the map.</h3>
+    <a href=".//maps/54027.png">
+    <img src=".//maps/54027.png" alt="World Equidistant Conic" width='500px'>
+    </a> 
+    <h2>North Pole Azimuthal Equidistant</h2>
+    <h3>This projection is quite similar to the previous one in patterns but the end result is slightly different. The very outer edge of the map is stretched wide enough that Antartica completely encircles the map, rather than leaving a gap. This is due to horizontal stretch that is slightly more extreme than the previous projection.</h3>
+    <a href=".//maps/102016.png">
+    <img src=".//maps/102016.png" alt="North Pole Azimuthal Equidistant" width='500px'>
+    </a>
+    <h2>World Eckert</h2>
+    <h3>The World Eckert map has a similar idea as the Aitoff and Winkel projection, but it's shape is more angular. The equator fo the map actually pushes out towards the left and right sides, giving the indicator a heart shape that becomes more extreme the further out you go. Unlike the other maps, the poles are still circular, though they are also distorted to give the appearance that the map has been wrapped around an object.</h3>
+    <a href=".//maps/54014.png">
+    <img src=".//maps/54014.png" alt="World Eckert" width='500px'>
+    </a>
+    <h2>Sphere Two Point Equidistant</h2>
+    <h3>This projection is probably the most eccentric of the ones shown here. Firstly, it is titled on its side, which then gives rise to a specific distortion pattern to maintain the integrity of the continents. South America and Austraila in particular are depicted as much larger than many other projections, I hypothesize that this is because they lie on the outermost edges of the projection and if they had not been distorted, then they would've been lost. Antartica has also been stretched, but it seems the the projection comes from the North Pole and is modified to make everything fit the picture of a globe tilted on its axis.</h3>
+    <a href=".//maps/53031.png">
+    <img src=".//maps/53031.png" alt="Sphere Two Point Equidistant" width='500px'>
+    </a>
     <h2>Data used for this project</h2>
     <a href="https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip"> Download Natrual Earth 1:10m Cultural Vector </a>
 </body>
